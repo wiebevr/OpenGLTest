@@ -42,7 +42,7 @@ void Widget::initializeGL()
         "}\n");
 
     QString fragmentShaderSource(
-        //"precision mediump float;\n"
+        "precision mediump float;\n"
         "\n"
         "void main(void)\n"
         "{\n"
