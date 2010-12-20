@@ -10,7 +10,7 @@ HEADERS += widget.h \
 
 SOURCES += widget.cpp \
            main.cpp
-
+QMAKESPEC = ..
 
 target.path = /usr/bin
 INSTALLS += target

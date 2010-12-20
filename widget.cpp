@@ -68,7 +68,6 @@ void Widget::initializeGL()
     _timer->start(10);
 }
 
-
 void Widget::resizeGL(int width, int height)
 {
     _projectionMatrix.setToIdentity();
@@ -100,5 +99,3 @@ void Widget::update()
     
     updateGL();
 }
-
-
