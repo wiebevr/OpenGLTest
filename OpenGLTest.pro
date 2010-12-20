@@ -10,7 +10,7 @@ HEADERS += widget.h \
 
 SOURCES += widget.cpp \
            main.cpp
-QMAKESPEC = ..
+QMAKESPEC = /home/plomplot/School/EmbeddedOS/oe_igep/openembedded/recipes/my-projects
 
 target.path = /usr/bin
 INSTALLS += target
