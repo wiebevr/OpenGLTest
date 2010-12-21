@@ -58,6 +58,8 @@ void Widget::initializeGL()
 
     QGLShader *vertexShader = new QGLShader(QGLShader::Vertex, this);
     QGLShader *fragmentShader = new QGLShader(QGLShader::Fragment, this);
+    qDebug() << "After constuctor Shaders.";
+    qDebug() << _vertexShader->log();
 
     vertexShader->compileSourceCode(vertexShaderSource);
     fragmentShader->compileSourceCode(fragmentShaderSource);
