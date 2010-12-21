@@ -1,6 +1,7 @@
 #include "widget.h"
 
 #include <QGLShader>
+#include <QDebug>
 
 Widget::Widget(QWidget *parent)
     : QGLWidget(parent)
@@ -29,6 +30,12 @@ Widget::~Widget()
 
 void Widget::initializeGL()
 {
+    qDebug() << "isValid:" << this->context()->isValid();
+    qDebug() << "isSharing:" << this->context()->isSharing();
+    qDebug() << "hasOpenGL:" << this->context()->format().hasOpenGL();
+    qDebug() << "Format:" << this->context()->format();
+
+
     glEnable(GL_DEPTH_TEST);
 
     QString vertexShaderSource(
