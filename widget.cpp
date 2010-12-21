@@ -7,7 +7,8 @@ Widget::Widget(QWidget *parent)
     : QGLWidget(parent)
 {
     _timer = new QTimer(this);
-
+    
+    setWindowState(Qt::WindowFullScreen);
     connect(_timer, SIGNAL(timeout()), this, SLOT(update()));
     _shaderProgram = NULL;
     _yRotation = 0.0;
