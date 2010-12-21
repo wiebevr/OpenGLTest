@@ -59,7 +59,7 @@ void Widget::initializeGL()
     QGLShader *vertexShader = new QGLShader(QGLShader::Vertex, this);
     QGLShader *fragmentShader = new QGLShader(QGLShader::Fragment, this);
     qDebug() << "After constuctor Shaders.";
-    qDebug() << _vertexShader->log();
+    qDebug() << vertexShader->log();
 
     vertexShader->compileSourceCode(vertexShaderSource);
     fragmentShader->compileSourceCode(fragmentShaderSource);
@@ -75,7 +75,7 @@ void Widget::initializeGL()
 
     qglClearColor(Qt::gray);
     _timer->start(10);
-    qDebug() << _vertexShader->log();
+    qDebug() << vertexShader->log();
 }
 
 void Widget::resizeGL(int width, int height)
