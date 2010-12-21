@@ -73,6 +73,7 @@ void Widget::initializeGL()
 
     qglClearColor(Qt::gray);
     _timer->start(10);
+    qDebug() << _vertexShader->log();
 }
 
 void Widget::resizeGL(int width, int height)
