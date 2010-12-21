@@ -8,7 +8,6 @@ Widget::Widget(QWidget *parent)
 {
     _timer = new QTimer(this);
     
-    //setWindowState(Qt::WindowFullScreen);
     connect(_timer, SIGNAL(timeout()), this, SLOT(update()));
     _shaderProgram = NULL;
     _yRotation = 0.0;
@@ -31,6 +30,7 @@ Widget::~Widget()
 
 void Widget::initializeGL()
 {
+    setWindowState(Qt::WindowFullScreen);
     qDebug() << "isValid:" << this->context()->isValid();
     qDebug() << "isSharing:" << this->context()->isSharing();
     qDebug() << "hasOpenGL:" << this->context()->format().hasOpenGL();
