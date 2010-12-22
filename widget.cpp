@@ -6,7 +6,7 @@
 Widget::Widget(QWidget *parent)
     : QGLWidget(QGLFormat(QGL::DirectRendering), parent)
 {
-    setWindowState(Qt::WindowFullScreen);
+    //setWindowState(Qt::WindowFullScreen);
     _timer = new QTimer(this);
     
     connect(_timer, SIGNAL(timeout()), this, SLOT(update()));
