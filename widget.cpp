@@ -4,7 +4,7 @@
 #include <QDebug>
 
 Widget::Widget(QWidget *parent)
-    : QGLWidget(QGLFormat(), parent)
+    : QGLWidget(QGLFormat(QGL::DirectRendering), parent)
 {
     setWindowState(Qt::WindowFullScreen);
     _timer = new QTimer(this);
