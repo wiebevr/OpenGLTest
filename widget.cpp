@@ -4,7 +4,7 @@
 #include <QDebug>
 
 Widget::Widget(QWidget *parent)
-    : QGLWidget(QGLFormat(QGL::SingleBuffer | QGL::Rgba | QGL::DirectRendering), parent)
+    : QGLWidget(QGLFormat(QGL::SingleBuffer | QGL::Rgba), parent)
 {
     _timer = new QTimer(this);
     
