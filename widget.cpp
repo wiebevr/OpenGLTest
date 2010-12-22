@@ -6,6 +6,7 @@
 Widget::Widget(QWidget *parent)
     : QGLWidget(QGLFormat(), parent)
 {
+    setWindowState(Qt::WindowFullScreen);
     _timer = new QTimer(this);
     
     connect(_timer, SIGNAL(timeout()), this, SLOT(update()));
@@ -30,7 +31,6 @@ Widget::~Widget()
 
 void Widget::initializeGL()
 {
-    setWindowState(Qt::WindowFullScreen);
     qDebug() << "isValid:" << this->context()->isValid();
     qDebug() << "isSharing:" << this->context()->isSharing();
     qDebug() << "hasOpenGL:" << this->context()->format().hasOpenGL();
