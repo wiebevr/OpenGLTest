@@ -3,6 +3,8 @@
 #include <QWidget>
 #include <QVBoxLayout>
 
+#define PARENT_WIDGET
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
