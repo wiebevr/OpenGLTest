@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 #ifdef PARENT_WIDGET
     QWidget parentWidget;
     QVBoxLayout *layout = new QVBoxLayout(&parentWidget);
-    parentWidget.showFullScreen();
+    //parentWidget.showFullScreen();
 #endif
     Widget widget;
 #ifdef PARENT_WIDGET
